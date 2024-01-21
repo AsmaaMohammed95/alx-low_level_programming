@@ -5,7 +5,7 @@
  * str_concat - function that concatenates two strings
  * @s1: first string
  * @s2: second string
- * Return : (str) on successed and NULL on failure
+ * Return: a pointer to char on successed or NULL on failure
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -14,6 +14,14 @@ char *str_concat(char *s1, char *s2)
 	int j = 0;
 	int a, b;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	while (s1[i] != '\0')
 	{
 		i++;
